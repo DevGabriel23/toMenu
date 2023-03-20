@@ -1,38 +1,196 @@
-.App {
-  text-align: center;
+header{
+  min-height: 25vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header{
+  background-image: url('https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 70%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header .fondo-logo{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  backdrop-filter: blur(5px);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header .fondo-logo img{
+  max-height: 200px;
+}
+
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container{
+  width: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* background-color: rgba(255, 192, 74, 0.906); */
+}
+
+.whatsapp{
+  border-radius: 12px;
+  border: solid;
+  border-width: 3px;
+  border-color: green;
+  font-family: 'Lexend Deca', sans-serif;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  background-color: green; /*se debe cambiar*/
+  padding: 10px;
+  font-size: 2rem;
   color: white;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.whatsapp .icon{
+  font-size: 25px;
+  padding-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.whatsapp:hover{
+  border: solid;
+  border-width: 3px;
+  border-color: green;
+  background-color: transparent;
+  color: green;
+}
+
+.nombre-seccion{
+  background-image: url(https://www.elsoldemexico.com.mx/doble-via/salud/7v4clh-comida-saludable/alternates/LANDSCAPE_768/Comida%20saludable);
+  border-radius: 30px;
+  width: 70%;
+  height: 100px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  font-family: 'Pacifico', sans-serif;
+  color: white;
+  font-size: 50px;
+}
+
+.nombre-seccion p{
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  padding: 5px;
+  text-align: center;
+}
+
+.seccion{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+
+.container h1{
+  margin: 10px;
+}
+
+.platillo{
+  margin-right: 10px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row-reverse;
+  text-align:justify;
+  width: auto;
+}
+
+.platillo img{
+  border-radius: 10px;
+  max-width: 200px;
+  aspect-ratio: 1/1;
+  margin: 1rem;
+  object-fit: cover;
+}
+
+.nombre-platillo, .descripcion-platillo, .precio-platillo{
+  color: #0e0e0e;
+}
+
+.nombre-platillo{
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+}
+
+.descripcion-platillo{
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 1.5rem;
+}
+
+.img-platillo{
+  position: relative;
+  display: inline-block;
+}
+
+.img-platillo .precio-platillo{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.6); /* color de fondo del texto */
+  padding: 5px 20px 20px 10px;
+}
+
+.precio-platillo{
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 2.8rem;
+}
+
+footer{
+  text-align: center;
+}
+
+@media (max-width: 760px){
+  .container{
+    width: 95%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .header{
+    width: 100%;
+  }
+
+  .seccion{
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  .nombre-seccion{
+    height: 80px;
+    width: 100%;
+    border-radius: 15px;
+    font-size: 40px;
+  }
+
+  .nombre-seccion p{
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+
+  .platillo{
+    margin-right: 0px;
+    margin-bottom: 0px;
+  }
+
+  .platillo img{
+    max-width: 120px;
+    margin: 0;
+    margin-right: 10px;
+  }
+
+  .precio-platillo{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.8rem;
   }
 }
