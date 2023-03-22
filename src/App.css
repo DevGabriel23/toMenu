@@ -70,8 +70,10 @@ main{
 }
 
 .nombre-seccion{
-  background-image: url(https://www.elsoldemexico.com.mx/doble-via/salud/7v4clh-comida-saludable/alternates/LANDSCAPE_768/Comida%20saludable);
+  /* background-image: url(https://www.elsoldemexico.com.mx/doble-via/salud/7v4clh-comida-saludable/alternates/LANDSCAPE_768/Comida%20saludable); */
   border-radius: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 70%;
   height: 100px;
   margin: 20px 0;
@@ -85,7 +87,7 @@ main{
 }
 
 .nombre-seccion p{
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 15px;
   padding: 5px;
   text-align: center;
@@ -105,8 +107,13 @@ main{
   margin-bottom: 30px;
   display: flex;
   flex-direction: row-reverse;
+  justify-content: space-between;
   text-align:justify;
-  width: auto;
+  min-width: 50%;
+}
+
+.platillo .info-platillo{
+  width: 100%;
 }
 
 .platillo img{
@@ -141,19 +148,19 @@ main{
   bottom: 0;
   right: 0;
   background-color: rgba(255, 255, 255, 0.6); /* color de fondo del texto */
-  padding: 5px 20px 20px 10px;
+  padding: 5px 20px 15px 10px;
 }
 
 .precio-platillo{
   font-family: 'Lexend Deca', sans-serif;
-  font-size: 2.8rem;
+  font-size: 2.2rem;
 }
 
 footer{
   text-align: center;
 }
 
-@media (max-width: 760px){
+@media (max-width: 790px){
   .container{
     width: 95%;
   }
@@ -173,10 +180,10 @@ footer{
     font-size: 40px;
   }
 
-  .nombre-seccion p{
+  /* .nombre-seccion p{
     background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
-  }
+  } */
 
   .platillo{
     margin-right: 0px;
@@ -187,6 +194,8 @@ footer{
     max-width: 120px;
     margin: 0;
     margin-right: 10px;
+    padding-bottom: 10px;
+    height: 100%;
   }
 
   .precio-platillo{
